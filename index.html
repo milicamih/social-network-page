@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 
+		
+        <link href="node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> 
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+	 
+		<script src="node_modules/jquery/dist/jquery.min.js"></script>
+		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="js/javascript.js"></script>   
+	</head>
+	<body>
+
+		<header class="header container-fluid">
+			<div class="row">
+				<div class="col-lg-6 col-md-7 col-sm-6 left">
+					<div class="frst-col-wraper">
+					    <div>
+	 					<img class="logo" src="img/logo.png" alt="logo">
+	 					</div>
+	 					<div>
+	 					<span class="learn">Learn, Grow, Collaborate</span>
+	 					</div>
+	 				</div>
+	 				<i class="fa fa-bars" id="true"></i>
+				</div>
+				<div class="col-lg-4 col-md-2 col-sm-6 right">
+				    <div class="second-col-wraper">
+					 	<input class="custom-input"  placeholder="Search">
+               			<span class="fa fa-search"></span>  
+               		</div>
+				</div>
+				<div class="col-lg-2 col-md-3 col-sm-12" id="third-container">
+					<ul class="ul1">
+						<li class="li1">
+							<img class="img" src="img/dragon.png" alt="plane">
+						</li>
+						<li class="li1">
+							<img class="img" src="img/letter.png" alt="letter">
+							<span class="number">6</span>
+						</li>
+						<li class="li1">
+							<img class="user-img img" src="img/current-user-img.png" alt="user">
+							<i class="fa fa-angle-up" id="click-acount"></i>
+							<ul class="ul2">
+								<li class="li2"><i class="fa fa-user-o profile" aria-hidden="true"></i> My profile</li>
+								<li class="li2"><i class="fa fa-users profile" aria-hidden="true"></i>My groups</li>
+								<li class="li2"><i class="fa fa-cog profile" aria-hidden="true"></i>Account settings</li>
+								<li class="li2"><i class="fa fa-sign-out profile" aria-hidden="true"></i>Logout</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>	
+		</header>
+
+ <!--main content of page-->      
+		<div class="container-fluid main-content">	
+			<div class="col-lg-8 col-md-12 col-sm-12"><!--left side of main content of page--> 	</div>
+			<div class="col-lg-4 col-md-12 col-sm-12">	<!--right side of main content of page--> 
+			    <section class="groups">
+			    
+			    		<div class="hedline-groups">
+			    			<div class="left">
+			    				<img class="img1" src="img/icon/groups.png" alt="plane">
+			    				<b><span>Groups</span></b>	
+			    			</div>	
+			    			<div class="">
+			    				<i class="fa fa-angle-left" onclick="plusDivs(-1)"></i>
+			    				<i class="fa fa-angle-right" onclick="plusDivs(-1)"></i>	
+			    			</div>
+			    		</div>
+			    	<div class="mySlides" id="groups1">		
+			    		<div class="groups-content">
+			    		    <div class="left">
+			    		        <div class="left-side">IRL</div>
+			    		        <div>
+			    				    <img class="img-right" src="img/icon/sport.png" alt="plane">Sport	
+			    			    </div>	
+			    		    </div>	
+			    		    <div class=""><b>4</b></div>
+			    	    </div>
+			    	    <div class="groups-content">
+			    		    <div class="left">
+			    			    <div class="left-side">IRL</div>
+			    			    <div>
+			    				    <img class="img-right" src="img/icon/music.png" alt="plane">Music	
+			    			    </div>	
+			    		    </div>	
+			    		    <div class=""><b>7</b></div>
+			    	    </div>	
+			         	<div class="groups-content">
+			    	    	<div class="left">
+			    			    <div class="left-side">	
+			    		   		    <img class="img" src="img/icon/earth.png"  alt="plane">
+			    		     	</div>	
+			    		     	<div>
+			    				    <img class="img-right" src="img/icon/game.png" alt="plane">Gaming
+			    			    </div>	
+			    	    	</div>	
+			    		    <div class=""><b>11</b></div>
+			    	    </div>	
+			      	    <div class="groups-content">
+			    		    <div class="left">
+			    			    <div class="left-side">IRL</div>
+			    			    <div>
+			    			        <img class="img-right" src="img/icon/film.png" alt="plane">Film
+			    			    </div>    	
+			    		    </div>	
+			    		    <div class=""><b>18</b></div>
+			    	    </div>	
+			     	    <div class="groups-content">
+			    		    <div class="left">
+			    		        <div class="left-side">IRL</div>
+			    		        <div>
+			    			        <img class="img-right" src="img/icon/love.png" alt="plane">NonProfit
+			    			    </div>    	
+			    		    </div>	
+			    		    <div class=""><b>2</b></div>
+			    	    </div>	
+                    </div>
+   <!--grups 2-->   <div class="mySlides" id="groups2">		
+			    		<div class="groups-content">
+			    		    <div class="left">
+			    		        <div class="left-side">IRL</div>
+			    		        <div>
+			    				    <img class="img-right" src="img/icon/sport.png" alt="plane">Sport	
+			    			    </div>	
+			    		    </div>	
+			    		    <div class=""><b>4</b></div>
+			    	    </div>
+			    	    <div class="groups-content">
+			    		    <div class="left">
+			    			    <div class="left-side">IRL</div>
+			    			    <div>
+			    				    <img class="img-right" src="img/icon/music.png" alt="plane">Music	
+			    			    </div>	
+			    		    </div>	
+			    		    <div class=""><b>7</b></div>
+			    	    </div>	
+			         	<div class="groups-content">
+			    	    	<div class="left">
+			    			    <div class="left-side">	
+			    		   		    <img class="img" src="img/icon/earth.png"  alt="plane">
+			    		     	</div>	
+			    		     	<div>
+			    				    <img class="img-right" src="img/icon/game.png" alt="plane">Gaming
+			    			    </div>	
+			    	    	</div>	
+			    		    <div class=""><b>11</b></div>
+			    	    </div>	
+			      	    <div class="groups-content">
+			    		    <div class="left">
+			    			    <div class="left-side">IRL</div>
+			    			    <div>
+			    			        <img class="img-right" src="img/icon/film.png" alt="plane">Film
+			    			    </div>    	
+			    		    </div>	
+			    		    <div class=""><b>18</b></div>
+			    	    </div>	
+			     	    <div class="groups-content">
+			    		    <div class="left">
+			    		        <div class="left-side">IRL</div>
+			    		        <div>
+			    			        <img class="img-right" src="img/icon/love.png" alt="plane">NonProfit
+			    			    </div>    	
+			    		    </div>	
+			    		    <div class=""><b>2</b></div>
+			    	    </div>	
+                    </div>
+ <!--grups 3-->     <div class="mySlides" id="groups3">		
+			    		<div class="groups-content">
+			    		    <div class="left">
+			    		        <div class="left-side">IRL</div>
+			    		        <div>
+			    				    <img class="img-right" src="img/icon/sport.png" alt="plane">Sport	
+			    			    </div>	
+			    		    </div>	
+			    		    <div class=""><b>4</b></div>
+			    	    </div>
+			    	    <div class="groups-content">
+			    		    <div class="left">
+			    			    <div class="left-side">IRL</div>
+			    			    <div>
+			    				    <img class="img-right" src="img/icon/music.png" alt="plane">Music	
+			    			    </div>	
+			    		    </div>	
+			    		    <div class=""><b>7</b></div>
+			    	    </div>		
+			      	    <div class="groups-content">
+			    		    <div class="left">
+			    			    <div class="left-side">IRL</div>
+			    			    <div>
+			    			        <img class="img-right" src="img/icon/film.png" alt="plane">Film
+			    			    </div>    	
+			    		    </div>	
+			    		    <div class=""><b>18</b></div>
+			    	    </div>	
+			    	    <div class="groups-content">
+			    	    	<div class="left">
+			    			    <div class="left-side">	
+			    		   		    <img class="img" src="img/icon/earth.png"  alt="plane">
+			    		     	</div>	
+			    		     	<div>
+			    				    <img class="img-right" src="img/icon/game.png" alt="plane">Gaming
+			    			    </div>	
+			    	    	</div>	
+			    		    <div class=""><b>11</b></div>
+			    	    </div>
+			     	    <div class="groups-content">
+			    		    <div class="left">
+			    		        <div class="left-side">IRL</div>
+			    		        <div>
+			    			        <img class="img-right" src="img/icon/love.png" alt="plane">NonProfit
+			    			    </div>    	
+			    		    </div>	
+			    		    <div class=""><b>2</b></div>
+			    	    </div>	
+                    </div>
+                      <div class="w3-center">
+    
+    <span class="w3-badge w3-white"></span>
+    <span class="w3-badge"></span>
+    <span class="w3-badge"></span>
+  </div>
+			    </section>
+
+			    <section class="events">
+			    </section>
+
+			    <img class="" src="img/lookBook.png" alt="plane">
+			    <img class="" src="img/richList.png" alt="plane">
+			</div>
+		</div>
+        
+		
+
+
+<!--
+  		<footer class="flex-container">
+  			<div>
+  				<img class="logo" src="img/logo.png" alt="logo">
+  				<span class="learn">Learn, Grow, Collaborate</span>
+  			</div>
+   	        <div>
+  				<ul>
+  					<li>Privacy Policy</li>
+  					<li>Terms & Conditions</li>
+  					<li>FAQ</li>
+  					<li>About</li>
+  					<li>Conctact</li>
+  				</ul>
+  			</div>
+  		</footer>-->
+	</body>
+
+</html>

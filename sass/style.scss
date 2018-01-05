@@ -1,0 +1,283 @@
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url('../fonts/Loboto-Regular.ttf');
+}
+/*GENERAL STYLE*/
+body{
+    font-family: "Lato-Regular";
+}
+ul{
+    padding:0px;
+    margin:0px;  
+}
+ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding:0px;
+    margin:0px;
+    text-align: center;
+}
+.header{
+    .left, .right, #third-container{
+        border-bottom: 1px solid #ababab; 
+    }
+    .left{    /*left side of header, logo*/
+        display: flex;
+        align-items:center;
+    }
+    .frst-col-wraper{
+        display: flex;
+        align-items:flex-end;
+    }
+    .learn{
+        color: #ababab;
+        border-left: 2px solid #cdd77e;
+        padding-left: 10px;
+        margin-left:10px;
+    }
+    .right{    /*right side of header, input fild*/
+        display: flex;
+        justify-content: flex-end;
+        align-items:middle;
+    }    
+    .second-col-wraper{
+        line-height: 53px;
+        border-left: 1px solid #ababab;
+        padding-left: 10px;
+    }    
+    .custom-input{   /*input field style*/
+        border: none;
+        border-bottom: 1px solid #ababab;
+        margin-right: 11px;
+        width: calc(80% - 60px);
+        font-size: 14px;
+        &:focus{
+            width: calc(100% - 60px);
+            border:none;
+        }
+    }
+    .fa-search {
+        background-color: #5cc8f6;
+        width: 45px;
+        color: #fff;
+        text-align: center;
+        line-height: 43px;
+        position: relative;
+    } 
+    .fa-search:after {
+        left: -26%;
+        top: 50%;
+        border: solid transparent;
+        content: " ";
+        position: absolute;
+        border-right-color: #5cc8f6;
+        border-width: 6px;
+        margin-top: -7px;
+    }
+         /*thrd container-right content style letter, arplain, user acount*/
+    #third-container, .right{
+        margin: 0;
+        padding: 0;
+        text-align: end;     
+    }
+    .li1{
+        line-height: 54px;
+        border-left: 1px solid #ababab; 
+        width: 30%; 
+        position:relative;  
+    }
+    .li1:nth-child(3){
+        width: 34%;
+    }
+    .number{
+        width: 13px;
+        line-height: 15px;
+        border-radius: 50%;
+        background-color: #fdd900;
+        position: absolute;
+        top: 20%;
+        left: 51%;
+        font-size: 12px;
+    }
+    .user-img{
+        border-radius:50%;
+    }
+    .fa-angle-up{
+        width: 20px;
+        line-height: 20px;
+        color: white;
+        background-color: #5cc8f6;
+        font-size: 23px;
+        position: absolute;
+        bottom: 6%;
+        right: 5%;
+    }
+    .ul2{  /*user acout setings style*/
+        width:170px;
+        background-color: #57cbf5;
+        position: absolute;
+        right: 0;
+        display: none;
+    }
+    .ul2 .li2{
+        display: block;
+        text-align: left;
+        line-height: 33px;
+        color: white;
+        &:hover{
+            background-color:#3fb1dc;
+        }
+       .profile{
+           margin: 0 9px;
+       }
+    }   
+    .li2:last-child{  
+        border-top: 1px solid white;
+    }
+}
+.fa-bars{ /* clickble bars for mobile*/
+    color: #ababab;
+    font-size: 26px;
+    padding: 3px;
+    border: 1px solid #ababab;
+    position: absolute;
+    right: 15px;
+    display: none;
+}
+/*main content style*/
+.main-content{
+    width: 85%;
+    
+
+    .groups{
+        background-color: #e9e7e7;
+        .img1{
+        margin: 0 10px;
+         }
+        .groups1{
+          padding: 11px;
+          background-color:red; 
+          clear: both; 
+        }
+        .hedline-groups{
+            padding: 2px 0 6px 0;
+            border-bottom: 1px solid #ababab; 
+        }
+        .groups-content, .hedline-groups{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .groups-content{
+            padding: 2px 0;
+            border-bottom: 1px solid #ababab; 
+        }
+        .left{
+            display: flex;
+            .left-side{
+                width: 36px;
+                margin-right: 10px;
+                text-align: center;  
+            }
+            .img-right{
+               padding: 0 10px; 
+                border-left: 1px solid #ababab;
+            }
+        }    
+            .w3-center{
+                width: 100%;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }    
+            .w3-badge{
+                background-color: #ababab;
+                width: 6px;
+                height: 7px;
+                border-radius: 50%;
+                margin-right: 4px;;
+            }    
+            .w3-white{
+                background-color:#5cc8f6;
+            }
+            
+    } 
+}
+
+
+
+/*footer style*/
+.flex-container{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    text-align:center;
+    margin-top: 150px;
+}
+
+
+
+/*STYLE FOR DESKTOP*/ 
+@media only screen and (min-width:769px){
+
+}
+/*STYLE FOR TABLETS*/ 
+@media only screen and (min-width:426px)and(max-width:768px){
+    .learn, .fa-bars{
+        display:none;
+    }
+    .logo{
+        padding:10px;
+    }
+    .ul1{
+        margin: 0 10px;
+        border-left: 1px solid #ababab;;
+        border-right: 1px solid #ababab;;
+    }
+    .li1{
+        width:32% !important;
+    }
+    .li1:nth-child(2){
+        width:34% !important;
+    } 
+    .li1:nth-child(1){
+        border:none;
+    } 
+    .second-col-wraper{
+        margin-right: 20px;
+        border:none !important;
+    } 
+     .fa-angle-up{
+        right: 29% !important;
+    }   
+}
+/*STYLE FOR MOBILE PHONES*/ 
+@media only screen and (max-width:427px){
+    .learn, .right, #third-container{
+        display:none !important;
+    }
+    .logo{
+        padding:10px;
+    }
+    .fa-bars{
+        display: block;
+    }  
+    .ul1{
+        margin: 0 10px;
+        border-left: 1px solid #ababab;
+        border-right: 1px solid #ababab;
+    }
+    .li1{
+        width:32% !important;
+    } 
+    .li1:nth-child(1), .second-col-wraper{
+        border:none !important;
+    } 
+    .fa-angle-up{;
+        right: 23%;
+    } 
+    .right{    /*right side of header, input fild*/
+        justify-content: center !important; 
+    }  
+}
