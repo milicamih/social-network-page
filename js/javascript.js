@@ -1,26 +1,60 @@
-$(document).ready(function() {
-    $('#click-acount').click(function() {
-            $('.ul2').toggle('1000');
+$(document).ready(function() { 
+
+
+    $('#click-acount').click(function() { //user acount dropdown menu
             $("i", this).toggleClass("fa-angle-up fa-angle-down"); 
-     });  
+     }); 
 
 
- var slideIndex = 1;
-showDivs(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+    $('#clickDots').click(function() { //edit, delite dropdown first user
+            $('.dropdown-dots').slideToggle("fast"); 
+     }); 
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
+     $('#clickDots1').click(function() { //edit, delite dropdown second user
+            $('.dropdown-dots1').slideToggle("fast"); 
+     }); 
+
+
+
+    // Configure/customize these variables.
+    var showChar = 140;  // How many characters are shown by default
+    var ellipsestext = "...";
+    var moretext = "Read more...";
+    var lesstext = "Read less";
+    
+
+    $('.more').each(function() {
+        var content = $(this).html();
+ 
+        if(content.length > showChar) {
+ 
+            var c = content.substr(0, showChar);
+            var h = content.substr(showChar, content.length - showChar);
+ 
+            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+ 
+            $(this).html(html);
+        }
+ 
+    });
+ 
+    $(".morelink").click(function(){
+        if($(this).hasClass("less")) {
+            $(this).removeClass("less");
+            $(this).html(moretext);
+        } else {
+            $(this).addClass("less");
+            $(this).html(lesstext);
+        }
+        $(this).parent().prev().toggle();
+        $(this).prev().toggle();
+        return false;
+    });
+
+ 
+
+
+
 
 });
