@@ -15,7 +15,15 @@ $(document).ready(function() {
             $('.dropdown-dots1').slideToggle("fast"); 
      }); 
 
+     var add = (function () { //likes
+    var counter = 5;
+    return function () {return counter += 1;}
+})();
 
+function myFunction(counter){
+    document.getElementById("count-likes").innerHTML = add();
+}
+ 
 
     // Configure/customize these variables.
     var showChar = 140;  // How many characters are shown by default
@@ -52,9 +60,44 @@ $(document).ready(function() {
         return false;
     });
 
- 
-
-
-
 
 });
+
+  
+ var clicks = 5; // likes counting filrst user
+    function onClick() {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+    };
+ 
+
+ var clicks = 2; // likes counting second user
+    function onClick1() {
+        clicks += 1;
+        document.getElementById("clicks1").innerHTML = clicks;
+    };
+ 
+ 
+ function prepareHTMLTemplate() {
+        var usersView = "";
+        userData.forEach(function(user) {
+            usersView += createUserTemplate(user);
+        })
+
+        document.getElementById('add-coment-wraper').innerHTML = usersView;
+    }
+
+    function createUserTemplate(user) {
+
+        var templateContent = 
+                                "<div class='one-comment-wraper clearfix'><div class='flex-item'>" +
+                                "<img class='profile-img border-radius pull-right' src='img/"+ user.name.toLowerCase() + ".png'>" +
+                                "<p class='name'><b>"+ user.name + "</b></p>" +
+                                "<p class='comment more'>"+ user.status + "</p>" +
+                                "<p class='date-time'>"+ dateAndTime + "</p>" +
+                               "</div>";
+                             
+                      
+    
+        return templateContent;
+    }

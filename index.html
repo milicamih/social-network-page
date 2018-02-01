@@ -21,7 +21,7 @@
 		<header class="navbar navbar-expand-lg sticky-top navbar-light align-items-center">
   			<p class="navbar-brand logo-wraper">
   				<img src="img/logo.png" class="d-inline-block logo-img" alt="logo">
-  				<span class="align-bottom learn">Learn, Grow, Collaborate</span>
+  				<span class="align-bottom logo-text">Learn, Grow, Collaborate</span>
   			</p>
 
 				<!--toggle button for tablets and mobile-->
@@ -40,10 +40,10 @@
 
 					<!--navigation bar and user dropdown menu-->
    				<ul class="navbar-nav"> 
-     				<li class="nav-item active">
+     				<li class="nav-item nav-item-header">
        					<a class="nav-link" href="#"><img src="img/dragon.png" class="" alt="logo"></a>
      				</li>
-     				 <li class="nav-item">
+     				 <li class="nav-item nav-item-header">
        					<a class="nav-link" href="#">
        						<div class="letter-wraper">
        							<img src="img/letter.png" class="" alt="logo">
@@ -51,8 +51,8 @@
        						</div>	
        					</a>	
       				</li>
-      				<li class="nav-item dropdown">
-       					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      				<li class="nav-item nav-item-header dropdown">
+       					<a class="nav-link no-pading" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          					<img src="img/current-user-img.png" class="border-radius user-img" alt="logo">
          					<span id="click-acount"><i class="fa fa-angle-up" id="click-acount"></i></span>
        					</a> <!--dropdown user acount setings-->
@@ -60,12 +60,11 @@
        					    <a class="dropdown-item" href="#"><i class="fa fa-user-o profile" aria-hidden="true"></i> My profile</a>
        					    <a class="dropdown-item" href="#"><i class="fa fa-users profile" aria-hidden="true"></i>My groups</a>
          					<a class="dropdown-item" href="#"><i class="fa fa-cog profile" aria-hidden="true"></i>Account settings</a>
-         					<div class="dropdown-divider"></div>
          					<a class="dropdown-item" href="#"><i class="fa fa-sign-out profile" aria-hidden="true"></i>Logout</a>
       					</div>
     				</li>
    				</ul>
-             </div>
+            </div>
 		</header>
 
 		<section class="container-fluid main-content">
@@ -74,20 +73,17 @@
    				<div class="col-lg-8"> <!--left side of main content-->
 
 					<div class="big-container1"><!--frst big container-Marc Klein-->
-					   <div class="header">
-					   		<div><!--left side of big container-user pic-->
-					   		   <span class="image-wraper"><!--positioned relativ for, picture, border botom and checkd icon-->
-					   		  		<i class="fa fa-check border-radius" aria-hidden="true"></i>
-					   				<img src="img/user-mark-klein.png" class="user-img img-thumbnail border-radius" alt="logo">
-									<svg width="120" height="50">			  
-  								 		<circle cx="50"  r="42" stroke="#c3ed84" stroke-width="3" fill="transparent"/>
-  								 	</svg>
-					   			</span>
+					   <div class="header clearfix">
+					   		<div class="header-left"><!--left side of big container-user pic-->
+					   		    <div class="user-image pic1">
+					   		   		 <div class="myCircle" style="border: solid 3px #c3ed84;"></div>  
+					   		   		 <i class="fa fa-check check-big" aria-hidden="true"></i>
+					   			</div>
 					   			<span class="name-user"><b>Mark Klein</b></span> 
 					   			<span class="name-user no-display"><small>uploaded a video</small></span>	
 					   		</div>
 					   	
-					   		<div class="button-container"><!--right side of big container-dropddown-->
+					   		<div class="header-right pull-right"><!--right side of big container-dropddown-->
 					   			<span class="time"><small> 3 mins ago</small></span>
    								<i class="fa fa-ellipsis-v" id="clickDots" aria-hidden="true"></i>
    								<ul class="dropdown-dots">
@@ -98,7 +94,7 @@
 					   </div>
 					   <div class="video-wraper-big"><!--wideo part-->	
 					   		<div class="video-wraper">
-					   			<h4>Tempor incididunt ut labore et dolore magna</h4>
+					   			<h5><b>Tempor incididunt ut labore et dolore magna</b></h5>
 					   			<span class="more">
    									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
    							    </span>
@@ -108,18 +104,16 @@
   		                    </div>
 					    </div>
 					    <div class="icons-wraper"><!--icon part-->
-					    	<span class="number">5</span>
-					    	<i class="fa fa-commenting-o" aria-hidden="true"></i>
+					    	<span class="number" id="clicks">5</span>
+					    	<i class="fa fa-thumbs-o-up" onClick="onClick()" aria-hidden="true"></i>
 					    	<span class="number">4</span>
-					    	<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+					    	<i class="fa fa-commenting-o" aria-hidden="true"></i>
 					    	<i class="fa fa-bluetooth-b" aria-hidden="true"></i>
 					    </div>
 						<div class="coment-wraper"><!--add compent part-->	
-							<i class="fa fa-check border-radius" aria-hidden="true"></i><!--user icon-->
+							<i class="fa fa-check check-small" aria-hidden="true"></i><!--user icon-->
 					   		<img src="img/current-user-img.png" class="user-img img img-thumbnail border-radius" alt="logo">
-								<svg width="84" height="40">			  
-  								 	<circle cx="50"  r="33" stroke="#278cb2" stroke-width="3" fill="transparent"/>
-  								</svg>
+							<div class="myCircle-small"></div>
   							<div class="input-group"><!--input field and send camera button-->
     						  	<input type="text" class="form-control" placeholder="&#xf040; Add coment">
      							<i class="fa fa-video-camera" aria-hidden="true"></i>
@@ -130,23 +124,21 @@
 						</div>
 					</div>
 
+					<div id="add-coment-wraper"></div>
 
 
 					<div class="big-container1 margin-top"><!--second big container-Rebbeca Smith-->
-					   <div class="header">
-					   		<div><!--left side of big container-user pic-->
-					   		   <span class="image-wraper"><!--positioned relativ for, picture, border botom and checkd icon-->
-					   		  		<i class="fa fa-check border-radius" aria-hidden="true"></i>
-					   				<img src="img/user-rebeca-smith.png" class="user-img border-radius img-thumbnail" alt="logo">
-									<svg width="120" height="50">			  
-  								 		<circle cx="50"  r="42" stroke="#278cb2" stroke-width="3" fill="transparent"/>
-  								 	</svg>
-					   			</span>
+					   <div class="header clearfix">
+					   		<div class="header-left"><!--left side of big container-user pic-->
+					   		   <div class="user-image pic2"><!--positioned relativ for, picture, border botom and checkd icon-->  
+					   		        <div class="myCircle" style="border: solid 3px rgb(63,137,166)"></div>
+					   		  		<i class="fa fa-check check-big" aria-hidden="true"></i>
+					   			</div>
 					   			<span class="name-user"><b>Rebecca Smith</b></span> 
 					   			<span class="name-user no-display"><small>posted a comment</small></span>	
 					   		</div>
 					   	
-					   		<div class="button-container"><!--right side of big container-dropddown-->
+					   		<div class="pull-right"><!--right side of big container-dropddown-->
 					   			<span class="time"><small> 10 mins ago</small></span>
    								<i class="fa fa-ellipsis-v" id="clickDots1" aria-hidden="true"></i>
    								<ul class="dropdown-dots1">
@@ -157,8 +149,8 @@
 					   </div>
 					   <div class="video-wraper-big"><!--wideo part-->	
 					   		<div class="video-wraper-difrent">
-					   		   <div class="wraper-white">
-					   			<h4>Tempor incididunt ut labore et dolore magna</h4>
+					   		   <div class="video-wraper">
+					   			<h5><b>Tempor incididunt ut labore et dolore magna</b></h5>
 					   			<span class="more">
    									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
    							    </span>
@@ -167,37 +159,41 @@
 
   		                   				     
                            <div class="header header-small">
-					   		   <span class="image-wraper image-wraper-difrent"><!--positioned relativ for, picture, border botom and checkd icon-->
-					   		  		<i class="fa fa-check border-radius chek-dif" aria-hidden="true"></i>
-					   				<img src="img/chrissy-davis.png" class="user-img cris border-radius" alt="logo">
-									<svg class="difrent-svg" width="88" height="35">	  
-  								 		<circle cx="50"  r="27" stroke="#fc8c56" stroke-width="3" fill="transparent"/>
-  								 	</svg>
-					   			</span>
-					   			<span class="name-user"><b>Chrissy Davis</b></span> 
-					   			<span class="name-user no-display"><small>uploaded a video</small></span>	
+					   		    <div class="header-left"><!--left side of big container-user pic-->
+					   		  		<div class="user-image pic3"><!--positioned relativ for, picture, border botom and checkd icon-->  
+					   		       		<div class="myCircle circle-difrent2"></div>
+					   		       		<i class="fa fa-check check-small" aria-hidden="true"></i>
+					   				</div>
+					  
+					   			    <span class="name-user font-size"><b>Chrissy Davis</b></span> 
+					   				<span class="name-user font-size no-display"><small>uploaded a video</small></span>
+					   			</div>	
 					       </div>
  
-                           <div class="video-vraper-difrent">
-                            	<div class="embed-responsive embed-responsive-16by9">
-  									<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5gq7no2ZQCM"  allowfullscreen></iframe>
-  								</div>	
+                          <div class="video-vraper-mrgin-left">
+                               <div class="video-wraper">
+                                    <p><b>Tempor incididunt ut labore et dolore magna</b></p>
+                                    <span class="more">
+   									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+   							    </span>
+                            	    <div class="embed-responsive embed-responsive-16by9">
+  									    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5gq7no2ZQCM"  allowfullscreen></iframe>
+  								    </div>	
+                                </div>
                            </div>
-
+                             
 					    </div>
 					    <div class="icons-wraper"><!--icon part-->
-					    	<span class="number">5</span>
-					    	<i class="fa fa-commenting-o" aria-hidden="true"></i>
+					    	<span class="number" id="clicks1">2</span>
+					    	<i class="fa fa-thumbs-o-up" onClick="onClick1()" aria-hidden="true"></i>
 					    	<span class="number">4</span>
-					    	<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+					    	<i class="fa fa-commenting-o" aria-hidden="true"></i>
 					    	<i class="fa fa-bluetooth-b" aria-hidden="true"></i>
 					    </div>
 						<div class="coment-wraper"><!--add compent part-->	
-							<i class="fa fa-check border-radius" aria-hidden="true"></i><!--user icon-->
-					   		<img src="img/current-user-img.png" class="user-img img border-radius img-thumbnail" alt="logo">
-								<svg width="84" height="40">			  
-  								 	<circle cx="50"  r="33" stroke="#278cb2" stroke-width="3" fill="transparent"/>
-  								</svg>
+							<i class="fa fa-check check-small" aria-hidden="true"></i><!--user icon-->
+					   		<img src="img/current-user-img.png" class="user-img img img-thumbnail border-radius" alt="logo">
+							<div class="myCircle-small"></div>
   							<div class="input-group"><!--input field and send camera button-->
     						  	<input type="text" class="form-control" placeholder="&#xf040; Add coment">
      							<i class="fa fa-video-camera" aria-hidden="true"></i>
@@ -396,9 +392,9 @@
 										</div>
 									</div>	
 										<ol class="carousel-indicators">
-							   				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-							   			    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-							   				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+							   				<li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+							   			    <li data-target="#carouselIndicators" data-slide-to="1"></li>
+							   				<li data-target="#carouselIndicators" data-slide-to="2"></li>
 							 			</ol>
 							        </section>								
                                 </div>
@@ -412,11 +408,11 @@
     		    </section>	 
 
 
-		<footer> <!--wraper to separate style from header-->
+			<footer> <!--wraper to separate style from header-->
 			    <nav class="navbar navbar-expand-lg navbar-light align-items-center sticky-bottom">
   					<p class="navbar-brand logo-wraper">
   				        <img src="img/logo-footer.png" class="d-inline-block logo-img" alt="logo">
-  				        <span class="learn align-bottom font-size white">©2015 Vabble.com. All rights reserved.</span>
+  				        <span class="learn align-bottom learn-bottom">©2015 Vabble.com. All rights reserved.</span>
   			        </p>
 
 						       <!--toggle button for tablets and mobile-->
@@ -428,15 +424,20 @@
 			  	    <div class="collapse navbar-collapse justify-content-end" id="navbarSupp">
 								<!--navigation bar and user dropdown menu-->
 			   			<ul class="navbar-nav"> 
-			     			<li class="nav-item"><a class="nav-link" href="#">Privacy Police</a></li>
-			     			<li class="nav-item"><a class="nav-link" href="#">Terms & Conditions</a></li>
-			      			<li class="nav-item dropdown"><a class="nav-link" href="#">FAQ</a></li>
-			    			<li class="nav-item dropdown"><a class="nav-link" href="#">About</a> </li>
-			    			<li class="nav-item dropdown"><a class="nav-link" href="#">Conctat</a></li>
+			     			<li class="nav-item nav-item1"><a class="nav-link nav-link1" href="#">Privacy Police</a></li>
+			     			<li class="nav-item nav-item1"><a class="nav-link nav-link1" href="#">Terms & Conditions</a></li>
+			      			<li class="nav-item nav-item1"><a class="nav-link nav-link1" href="#">FAQ</a></li>
+			    			<li class="nav-item dropdown nav-item1"><a class="nav-link nav-link1" href="#">About</a> </li>
+			    			<li class="nav-item dropdown nav-item1"><a class="nav-link nav-link1" href="#">Conctat</a></li>
 			   			</ul>
 			        </div>
                 </nav>     
-        </footer>
+       		</footer>
+
+         <span class="glyphicon glyphicon-thumbs-up"></span>
+          <span class="glyphicon">&#xe235;</span>
+         <i class="fa fa-ellipsis-v" id="clickDots1" aria-hidden="true"></i>
+          <i class="material-icons">share</i>
 	</body>
 </html>	
 
