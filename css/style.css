@@ -398,11 +398,10 @@ header {
 
 .more {
   /*text font size*/
-  font-size: 15px;
-  text-align: center; }
+  font-size: 15px; }
 
 .morelink {
-  color: #5cc8f6; }
+  color: #3ca3ca; }
 
 .font-size {
   font-size: 12px; }
@@ -429,6 +428,18 @@ footer {
     color: white;
     font-size: 14px;
     padding-bottom: 0; }
+
+.add-coment-wraper {
+  /*adding comment style*/
+  padding: 30px 25px; }
+  .add-coment-wraper .coment-writer-name {
+    color: #3ca3ca;
+    margin-left: 5px;
+    vertical-align: -webkit-baseline-middle; }
+  .add-coment-wraper .one-comment-wraper {
+    margin-bottom: 10px; }
+  .add-coment-wraper .date-time {
+    margin-top: -19px; }
 
 /*together style for tablets and mobile*/
 @media only screen and (max-width: 994px) {

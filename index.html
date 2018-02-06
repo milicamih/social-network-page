@@ -104,10 +104,10 @@
   		                    </div>
 					    </div>
 					    <div class="icons-wraper"><!--icon part-->
-					    	<span class="number" id="clicks">5</span>
-					    	<i class="fa fa-thumbs-o-up" onClick="onClick()" aria-hidden="true"></i>
+					    	<span class="number">5</span>
+					    	<i class="fa fa-thumbs-o-up" onClick="onClickLike(this)" aria-hidden="true"></i>
 					    	<span class="number">4</span>
-					    	<i class="fa fa-commenting-o" aria-hidden="true"></i>
+					    	<i class="fa fa-commenting-o" id="mesage" aria-hidden="true"></i>
 					    	<i class="fa fa-bluetooth-b" aria-hidden="true"></i>
 					    </div>
 						<div class="coment-wraper"><!--add compent part-->	
@@ -115,16 +115,34 @@
 					   		<img src="img/current-user-img.png" class="user-img img img-thumbnail border-radius" alt="logo">
 							<div class="myCircle-small"></div>
   							<div class="input-group"><!--input field and send camera button-->
-    						  	<input type="text" class="form-control" placeholder="&#xf040; Add coment">
+    						  	<input type="text" class="form-control" id="la" placeholder="&#xf040; Add coment">
      							<i class="fa fa-video-camera" aria-hidden="true"></i>
       							<span class="input-group-btn">
-       								<button class="btn btn-default btn-send" type="button">Send</button>
+       								<button onClick="onClickSendMessage(this, 'add-coment-wraper1')" class="btn btn-default btn-send" type="button">Send</button>
       							</span>
                             </div>
 						</div>
 					</div>
 
-					<div id="add-coment-wraper"></div>
+					<div id="add-coment-wraper1" class="add-coment-wraper clearfix">
+						<div class="one-comment-wraper">
+						    <div class="user-wraper">
+                                <img class="border-radius" src="img/current-user-img.png">
+                                <span class="coment-writer-name"><b>Rebeca</b></span>	
+                            </div>	
+                       		<p class="more">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                       		<p class="date-time pull-right font-size">Fri Feb 02 2018</p>
+                        </div>  
+                        <div class="one-comment-wraper">
+						    <div class="user-wraper">
+                                <img class="border-radius" src="img/current-user-img.png">
+                                <span class="coment-writer-name"><b>Rebeca</b></span>	
+                            </div>	
+                       		<p class="more">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                       		<p class="date-time pull-right font-size">Fri Feb 02 2018</p>
+                        </div>  
+                      
+					</div>
 
 
 					<div class="big-container1 margin-top"><!--second big container-Rebbeca Smith-->
@@ -184,8 +202,8 @@
                              
 					    </div>
 					    <div class="icons-wraper"><!--icon part-->
-					    	<span class="number" id="clicks1">2</span>
-					    	<i class="fa fa-thumbs-o-up" onClick="onClick1()" aria-hidden="true"></i>
+					    	<span class="number">2</span>
+					    	<i class="fa fa-thumbs-o-up" onClick="onClickLike(this)" aria-hidden="true"></i>
 					    	<span class="number">4</span>
 					    	<i class="fa fa-commenting-o" aria-hidden="true"></i>
 					    	<i class="fa fa-bluetooth-b" aria-hidden="true"></i>
@@ -198,14 +216,17 @@
     						  	<input type="text" class="form-control" placeholder="&#xf040; Add coment">
      							<i class="fa fa-video-camera" aria-hidden="true"></i>
       							<span class="input-group-btn">
-       								<button class="btn btn-default btn-send" type="button">Send</button>
+       								<button onClick="onClickSendMessage(this, 'add-coment-wraper2')" class="btn btn-default btn-send" type="button">Send</button>
       							</span>
                             </div>
 						</div>
 					</div>
+
+					<div id="add-coment-wraper2" class="add-coment-wraper clearfix"></div>
+
    				</div>
 
-
+				
    				<div class="col-lg-4"> <!--right side of main content-->
 					<div class=flex-container> <!--wraping in flex-container to manage mobile and tablet look-->
 						<div class="flex-item flex1">

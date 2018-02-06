@@ -63,41 +63,38 @@ function myFunction(counter){
 
 });
 
-  
- var clicks = 5; // likes counting filrst user
-    function onClick() {
-        clicks += 1;
-        document.getElementById("clicks").innerHTML = clicks;
-    };
- 
-
- var clicks = 2; // likes counting second user
-    function onClick1() {
-        clicks += 1;
-        document.getElementById("clicks1").innerHTML = clicks;
-    };
- 
- 
- function prepareHTMLTemplate() {
-        var usersView = "";
-        userData.forEach(function(user) {
-            usersView += createUserTemplate(user);
-        })
-
-        document.getElementById('add-coment-wraper').innerHTML = usersView;
-    }
-
-    function createUserTemplate(user) {
-
-        var templateContent = 
-                                "<div class='one-comment-wraper clearfix'><div class='flex-item'>" +
-                                "<img class='profile-img border-radius pull-right' src='img/"+ user.name.toLowerCase() + ".png'>" +
-                                "<p class='name'><b>"+ user.name + "</b></p>" +
-                                "<p class='comment more'>"+ user.status + "</p>" +
-                                "<p class='date-time'>"+ dateAndTime + "</p>" +
-                               "</div>";
-                             
-                      
     
-        return templateContent;
-    }
+function onClickLike(args) { // counting likes
+    var likeNumber = Number(args.parentElement.firstElementChild.innerHTML);
+    args.parentElement.firstElementChild.innerHTML = ++likeNumber;
+};
+ 
+ 
+function createUserTemplate(messageText) {
+
+    var templateContent =   "<div class='one-comment-wraper'>" +
+                                "<div class='user-wraper'>" +
+                                    "<img class='profile-img border-radius' src='img/current-user-img.png'>" +
+                                    "<span class='coment-writer-name'><b>Rebeca</b></span>" +
+                                "</div>" +     
+                                "<p class='more'>"+ messageText + "</p>" +
+                                "<p class='date-time pull-right font-size'>"+ new Date().toDateString() + "</p>" +
+                            "</div>";
+                            
+                    
+
+    return templateContent;
+}
+
+function onClickSendMessage(btnElement, idOfMessageContainer) {
+    var container = document.getElementById(idOfMessageContainer);
+
+    container.innerHTML = container.innerHTML + createUserTemplate(btnElement.parentElement.parentElement.firstElementChild.value);
+    btnElement.parentElement.parentElement.firstElementChild.value="";
+}
+
+function countingMessages(args) { // counting messages
+      var contingMessages = document.getElementById("add-coment-wraper1").childElementCount;
+     document.getElementById("mesage").innerHTML = contingMessages;
+};
+
