@@ -15,15 +15,7 @@ $(document).ready(function() {
             $('.dropdown-dots1').slideToggle("fast"); 
      }); 
 
-     var add = (function () { //likes
-    var counter = 5;
-    return function () {return counter += 1;}
-})();
 
-function myFunction(counter){
-    document.getElementById("count-likes").innerHTML = add();
-}
- 
 
     // Configure/customize these variables.
     var showChar = 140;  // How many characters are shown by default
@@ -63,8 +55,8 @@ function myFunction(counter){
 
 });
 
-    
-function onClickLike(args) { // counting likes
+  
+function onClickLike(args) {
     var likeNumber = Number(args.parentElement.firstElementChild.innerHTML);
     args.parentElement.firstElementChild.innerHTML = ++likeNumber;
 };
@@ -72,11 +64,12 @@ function onClickLike(args) { // counting likes
  
 function createUserTemplate(messageText) {
 
+
     var templateContent =   "<div class='one-comment-wraper'>" +
                                 "<div class='user-wraper'>" +
-                                    "<img class='profile-img border-radius' src='img/current-user-img.png'>" +
+                                    "<img class='border-radius' src='img/current-user-img.png'>" +
                                     "<span class='coment-writer-name'><b>Rebeca</b></span>" +
-                                "</div>" +     
+                                "</div>" +    
                                 "<p class='more'>"+ messageText + "</p>" +
                                 "<p class='date-time pull-right font-size'>"+ new Date().toDateString() + "</p>" +
                             "</div>";
@@ -88,13 +81,19 @@ function createUserTemplate(messageText) {
 
 function onClickSendMessage(btnElement, idOfMessageContainer) {
     var container = document.getElementById(idOfMessageContainer);
+    var input = btnElement.parentElement.parentElement.firstElementChild;
 
-    container.innerHTML = container.innerHTML + createUserTemplate(btnElement.parentElement.parentElement.firstElementChild.value);
-    btnElement.parentElement.parentElement.firstElementChild.value="";
+    container.innerHTML = container.innerHTML + createUserTemplate(input.value);
+    input.value = "";
+
+    onClickCountMessage(idOfMessageContainer)
+    
 }
 
-function countingMessages(args) { // counting messages
-      var contingMessages = document.getElementById("add-coment-wraper1").childElementCount;
-     document.getElementById("mesage").innerHTML = contingMessages;
+function onClickCountMessage(idOfMessageContainer) {
+    var messageRef = document.getElementById(idOfMessageContainer + "-msgCount");
+    var messageNumber = Number(messageRef.innerHTML);
+    messageRef.innerHTML = ++messageNumber;
 };
+
 
